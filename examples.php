@@ -21,4 +21,34 @@ foreach ($prices as $price) {
 echo '合計金額は'.$totalPrice.'円です';
 echo '<br>';
 echo '最高価格は'.$maxPrice.'円です';
+
+
+
+
+
+
+
+
+$menus = array(
+  array('name' => 'CURRY', 'price' => 900),
+  array('name' => 'PASTA', 'price' => 1200),
+  array('name' => 'COFFEE', 'price' => 600)
+);
+
+// この下にコードを書いてください
+$total = 0;
+$maxprice = 0;
+$maxfood = 0;
+foreach($menus as $menu) {
+  if($maxprice < $menu['price']) {
+   $maxprice = $menu['price'];
+   $maxfood = $menu['name'];
+  }
+  echo $menu['name'].'は'.$menu['price'].'円です<br>';
+  $total = $menu['price'];
+}
+
+echo '合計金額は'.$total.'円です<br>';
+echo $maxfood.'が最高価格で'.$maxprice.'円です'
+
 ?>
